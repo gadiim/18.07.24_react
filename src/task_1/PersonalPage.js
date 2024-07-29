@@ -8,6 +8,15 @@ function PersonalPage() {
     });
     const onSubmit = (data) => {
         console.log(data);
+        alert(
+            "name:   " + data.name + "\n"
+            + "surname:   " + data.surname + "\n"
+            + "phone:   " + data.phone + "\n"
+            + "email:   " + data.email + "\n"
+            + "residence:   " + data.residence + "\n"
+            + "experience:   " + data.experience + "\n"
+            + "skills:   " + data.skills + "\n"
+        );
     };
 
     return (
@@ -27,7 +36,9 @@ function PersonalPage() {
                 <button type="submit">Submit</button>
                 <button type="button" onClick={() => reset(bioData)}>
                     Reset
-                </button></div>
+                </button>
+            </div>
+
         </form>
     );
 };

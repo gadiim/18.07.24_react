@@ -62,7 +62,10 @@ hr {
   margin: 15px;
 }
 
-.bio-container button, .city-form button, .resetBtn {
+.bio-container button,
+.registration-container div button,
+.city-form button,
+.resetBtn {
   width: 100px;
   height: 35px;
   border-radius: 50px;
@@ -72,36 +75,67 @@ hr {
   float: right;
 }
 
-.bio-container button:hover, .city-form button:hover, .editBtn:hover, .resetBtn:hover {
+.bio-container button:hover,
+.registration-container button:hover,
+.city-form button:hover,
+.editBtn:hover,
+.resetBtn:hover {
   opacity: 0.7;
 }
 
-.bio-container button:first-child, .city-form button {
+.bio-container button:first-child,
+.registration-container button:first-child,
+.city-form button:first-of-type {
   background-color: var(--main-color);
   color: white;
 }
 
-.bio-container button:last-child, .resetBtn {
+.bio-container button:last-child,
+.city-form button:last-child,
+.registration-container button:last-child,
+.resetBtn {
   background-color: white;
   color: var(--main-color);
 
 }
 
-.task-2 h4 {
-  text-align: center;
-  text-transform: uppercase;
-margin-left: 35px;
+.valid-message {
+  content: "nickname";
+  color: var(--main-color);
 }
 
+.error-message {
+  color: red;
+}
+
+.App2 h4,
+.App3 h4,
+.App4 h4,
+.App5 h4 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.App4 h4 {
+  margin-left: 35px;
+}
+
+.registration-container,
 .city-items {
   display: flex;
   flex-direction: column;
 }
 
-.city-items div {
+.city-items div,
+.registration-container div:not(:last-child) {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+}
+
+.registration-container label {
+  width: 100px;
+  margin-left: 20px;
 }
 
 .city-items label {
@@ -110,11 +144,16 @@ margin-left: 35px;
   margin-right: 10px;
 }
 
+.registration-container div input,
 .city-items input {
   padding: 5px;
   flex: 1;
   border-radius: 8px;
   border-color: transparent;
+}
+
+.registration-container div input {
+  background-color: var(--pointer-color);
 }
 
 .city-form {
@@ -162,6 +201,6 @@ margin-left: 35px;
   opacity: 1;
 }
 
-.cities-list  {
+.cities-list {
   margin: 20px;
 }
