@@ -8,11 +8,11 @@ import tag from './img/tag.svg';
 function PhotoPage({ ...data }) {
   return (
     <div className='photo-container'>
-        <img className="photo-main-photo"
-          src={data.photo || img}
-          alt={data.photo ? "Submitted Preview" : "Default Preview"}
-        />
-        <br></br>
+      <img className="photo-main-photo"
+        src={data.photo || img}
+        alt={data.photo ? "Submitted Preview" : "Default Preview"}
+      />
+      <br></br>
       <p><img src={nickname} alt="nickname"></img>nickname: <i>{data.nickname}</i></p>
       <p><img src={email} alt="email"></img>email: <i>{data.email}</i></p>
       <p><img src={description} alt="description"></img>description: <i>{data.description}</i></p>
